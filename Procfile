@@ -1,2 +1,2 @@
 run:
-  web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker server.main:app
+  web: uvicorn server:main:app --host 0.0.0.0 --port $PORT
