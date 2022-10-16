@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: server/heroku-dockerfile.yml
+run:
+  web: uvicorn main:app --host 0.0.0.0 --port $PORT
