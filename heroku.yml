@@ -2,4 +2,4 @@ build:
   docker:
     server: server/heroku-docker.yml
 run:
-  server: unicorn -w2 -b 0.0.0.0:$PORT -t 60 main:app
+  server: uvicorn --host 0.0.0.0 --port $PORT main:app
