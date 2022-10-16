@@ -1,3 +1,5 @@
 build:
   docker:
     server: server/heroku-docker.yml
+run:
+  server: gunicorn -w2 -b 0.0.0.0:$PORT -t 60 main:app
