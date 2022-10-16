@@ -3,8 +3,8 @@ FROM python:3.10.4 as base
 WORKDIR /usr/src/app/web/
 COPY . /usr/src/app/web/
 ENV PORT $PORT
-RUN pip install fastapi uvicorn gunicorn
-CMD  ["/bin/sh", "start.sh"]
+RUN pip install fastapi uvicorn
+CMD  ["/bin/sh", "-c", "uvicorn main:app --host=0.0.0.0 --port=${PORT:-5000}"]
 
 FROM base as dev
 
