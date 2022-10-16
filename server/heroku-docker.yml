@@ -4,7 +4,7 @@ WORKDIR /usr/src/app/web/
 COPY . /usr/src/app/web/
 ENV PORT $PORT
 RUN pip install fastapi uvicorn
-ENTRYPOINT  ["/bin/sh", "start.sh"]
+CMD  ["/bin/sh", "start.sh"]
 
 FROM base as dev
 
