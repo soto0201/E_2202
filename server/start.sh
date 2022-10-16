@@ -1,1 +1,1 @@
-uvicorn --host 0.0.0.0 --port ${PORT:-8000} main:app
+uvicorn --host neurecord.herokuapp.com --port $PORT main:app

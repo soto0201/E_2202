@@ -2,4 +2,4 @@ build:
   docker:
     server: server/heroku-docker.yml
 run:
-  server: uvicorn --host neurecord.herokuapp.com --port ${PORT:-8000} main:app
+  server: uvicorn --host neurecord.herokuapp.com --port $PORT main:app
